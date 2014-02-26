@@ -1,0 +1,18 @@
+//
+// SASS-BASE - a starter kit for any SASS project
+//
+// Author: Dmitry Monin
+
+/* Set up a variable for maths */
+$doc-font-size: 16 !default;
+
+/* the font-size mixin */
+@mixin font-size($size) {
+  font-size: 0px + $size;
+  font-size: 0rem + $size / $doc-font-size;
+}
+
+@function rem($size) {
+  $remSize: $size / $doc-font-size;
+  @return #{$remSize}rem;
+}

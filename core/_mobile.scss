@@ -1,0 +1,20 @@
+//
+// SASS-BASE - a starter kit for any SASS project
+//
+// Author: Dmitry Monin
+
+// Disables default half transparent tap color on buttons
+.no-tap-color {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Disable promt action dialog on longer touch
+.no-touch-action {
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
+}
+
+// Disables text adjusting after rotating
+body.no-text-adjust {
+  -webkit-text-size-adjust: none;
+}

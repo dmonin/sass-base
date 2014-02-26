@@ -1,0 +1,27 @@
+//
+// SASS-BASE - a starter kit for any SASS project
+//
+// Author: Dmitry Monin
+
+.cover-background {
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    &.visible {
+        display: block;
+    }
+}
+
+.cover-background-img {
+    position: absolute;
+}
+
+.cover-background-content {
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
