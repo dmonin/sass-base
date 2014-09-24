@@ -4,21 +4,28 @@
 // Author: Dmitry Monin
 
 $width-mobile: 420px !default;
-$width-small-screen: 779px !default;
-$width-medium-screen: 1023px !default;
-$width-wide-screen: 1600px !default;
+$width-small-screen: 768px !default;
+$width-medium-screen: 1024px !default;
+$width-wide-screen: 1280px !default;
 
-@mixin respond-to($media) {
+@mixin respond-to($media, $type) {
+  $width: 0;
   @if $media == "mobile" {
-    @media only screen and (max-width: $width-mobile) { @content; }
+    $width: $width-mobile;
   }
   @else if $media == "small-screen" {
-    @media only screen and (max-width: $width-small-screen)  { @content; }
+    $width: $width-small-screen;
   }
   @else if $media == "medium-screen" {
-    @media only screen and (max-width: $width-medium-screen) { @content; }
+    $width: $width-medium-screen;
   }
   @else if $media == "wide-screen" {
-    @media only screen and (min-width: $width-wide-screen) { @content; }
+    $width: $width-wide-screen;
   }
+
+  @if ($type == "max") {
+    $width: $width - 1;
+  }
+
+  @media only screen and (#{$type}-width: $width) { @content; }
 }

@@ -1,0 +1,15 @@
+/*
+* Ghost Vertical Align
+*/
+@mixin ghost-vertical-align($pseudoEl: before){
+  &:#{$pseudoEl} {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: .1px;
+  }
+}
+%vertical-align {
+  @include ghost-vertical-align();
+}

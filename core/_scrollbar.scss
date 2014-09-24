@@ -1,0 +1,16 @@
+/**
+ * Mixin scrollbar
+ */
+@mixin scrollbar($size, $primary, $secondary: lighten($primary, 25%)) {
+  &::-webkit-scrollbar {
+    width:  $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $secondary;
+  }
+}
