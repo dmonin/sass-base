@@ -4,7 +4,7 @@
 // Author: Dmitry Monin
 
 // Disables default half transparent tap color on buttons
-.no-tap-color {
+.no-tap-color, .no-tap-color * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
