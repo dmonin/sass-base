@@ -14,6 +14,10 @@
   -webkit-touch-callout: none;
 }
 
+.default-tap-action {
+  -webkit-touch-callout: default;
+}
+
 // Disables text adjusting after rotating
 body.no-text-adjust {
   -webkit-text-size-adjust: none;
