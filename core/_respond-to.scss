@@ -3,7 +3,7 @@
 //
 // Author: Dmitry Monin
 
-$width-mobile: 420px !default;
+$width-mobile: 500px !default;
 $width-small-screen: 768px !default;
 $width-medium-screen: 1024px !default;
 $width-wide-screen: 1280px !default;
@@ -21,10 +21,6 @@ $width-wide-screen: 1280px !default;
   }
   @else if $media == "wide-screen" {
     $width: $width-wide-screen;
-  }
-
-  @if ($type == "max") {
-    $width: $width - 1;
   }
 
   @media only screen and (#{$type}-width: $width) { @content; }
