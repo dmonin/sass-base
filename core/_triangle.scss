@@ -6,8 +6,8 @@
 @mixin triangle($direction, $size: 8px, $color: #222){
   content: '';
   display: block;
-  position: absolute;
-  height: 0; width: 0;
+  height: 0;
+  width: 0;
   @if ($direction == 'up'){
     border-bottom: $size solid $color;
     border-left: $size solid transparent;
