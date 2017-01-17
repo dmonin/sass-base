@@ -23,5 +23,9 @@ $width-wide-screen: 1280px !default;
     $width: $width-wide-screen;
   }
 
+  @if ($type == "max") {
+    $width: $width - 1;
+  }
+
   @media only screen and (#{$type}-width: $width) { @content; }
 }
