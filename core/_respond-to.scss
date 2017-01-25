@@ -3,24 +3,41 @@
 //
 // Author: Dmitry Monin
 
-$width-mobile: 500px !default;
-$width-small-screen: 768px !default;
-$width-medium-screen: 1024px !default;
-$width-wide-screen: 1280px !default;
+$width-mobile-s: 320px !default;
+$width-mobile-m: 375px !default;
+$width-mobile-l: 425px !default;
+$width-tablet: 768px !default;
+$width-laptop: 1024px !default;
+$width-laptop-l: 1440px !default;
+$width-4k: 2560px !default;
 
 @mixin respond-to($media, $type) {
   $width: 0;
-  @if $media == "mobile" {
-    $width: $width-mobile;
+
+  @if $media == "mobile-s" {
+    $width: $width-mobile-s;
   }
-  @else if $media == "small-screen" {
-    $width: $width-small-screen;
+  @else if $media == "mobile-m" {
+    $width: $width-mobile-m;
   }
-  @else if $media == "medium-screen" {
-    $width: $width-medium-screen;
+  @else if $media == "mobile-l" {
+    $width: $width-mobile-l;
   }
-  @else if $media == "wide-screen" {
-    $width: $width-wide-screen;
+  @else if $media == "tablet" {
+    $width: $width-tablet;
+  }
+  @else if $media == "laptop" {
+    $width: $width-laptop;
+  }
+  @else if $media == "laptop-l" {
+    $width: $width-laptop-l;
+  }
+  @else if $media == "4k" {
+    $width: $width-4k;
+  }
+
+  @if ($type == "max") {
+    $width: $width - 1;
   }
 
   @if ($type == "max") {
