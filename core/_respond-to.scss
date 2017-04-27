@@ -35,6 +35,9 @@ $width-4k: 2560px !default;
   @else if $media == "4k" {
     $width: $width-4k;
   }
+  @else {
+    @warn "Unknown media type: #{$media}";
+  }
 
   @if ($type == "max") {
     $width: $width - 1;
