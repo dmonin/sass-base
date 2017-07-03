@@ -43,9 +43,5 @@ $width-4k: 2560px !default;
     $width: $width - 1;
   }
 
-  @if ($type == "max") {
-    $width: $width - 1;
-  }
-
   @media only screen and (#{$type}-width: $width) { @content; }
 }
